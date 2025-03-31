@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.9;
 
-import "../src/Books.sol";  // Correct import path
+import "../src/Books.sol"; // Correct import path
 
-import "forge-std/Script.sol";  // Foundry Script functionality
+import "forge-std/Script.sol"; // Foundry Script functionality
 
 contract UpdateBookScript is Script {
     function run() public {
@@ -11,9 +11,9 @@ contract UpdateBookScript is Script {
         Books books = new Books("Programming Foundry", "Khushil", 100);
 
         // Simulate the deployment
-        vm.startBroadcast();  // Start broadcasting to the blockchain
-        books.update_pages(250);  // Update book pages to 250
-        vm.stopBroadcast();  // End broadcasting to the blockchain
+        vm.startBroadcast(); // Start broadcasting to the blockchain
+        books.update_pages(250); // Update book pages to 250
+        vm.stopBroadcast(); // End broadcasting to the blockchain
 
         // Log the updated book details
         Books.Book memory updatedBook = books.get_book();
