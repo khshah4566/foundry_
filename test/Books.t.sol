@@ -17,7 +17,7 @@ contract BooksTest is Test {
     }
 
     // Test the get_book function
-    function test_get_book() public {
+    function test_get_book() public view {
         Books.Book memory retrievedBook = books.get_book();
         assertEq(retrievedBook.title, "Programming Foundry");
         assertEq(retrievedBook.author, "Khushil");
